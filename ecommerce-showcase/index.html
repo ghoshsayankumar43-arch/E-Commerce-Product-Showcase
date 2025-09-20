@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendWave</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN SECTION -->
+  <div id="login-section" class="login-section">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="login-btn">Login</button>
+    <p id="login-error" style="color:red; display:none;">Invalid credentials. Try again.</p>
+  </div>
+
+  <!-- MAIN SHOP SECTION (hidden until login) -->
+  <div id="shop-section" style="display:none;">
+    <!-- Header -->
+    <header>
+      <h1>TrendWave</h1>
+      <p>Explore our products and add them to your cart</p>
+      <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="clothing">Clothing</button>
+      <button class="filter-btn" data-category="electronics">Electronics</button>
+      <button class="filter-btn" data-category="accessories">Accessories</button>
+    </div>
+
+    <!-- Product Grid (same as before, with your 12 products) -->
+   <!-- Product Grid -->
+<div class="product-grid">
+
+  <!-- Clothing -->
+  <div class="product-card" data-category="clothing" data-id="1" data-title="Casual Shirt" data-price="25" data-img="images/shirt.jpg">
+    <img src="images/shirt.jpg" alt="Casual Shirt">
+    <h3>Casual Shirt</h3>
+    <p>₹1299</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="clothing" data-id="2" data-title="Jeans" data-price="40" data-img="images/jeans.jpg">
+    <img src="images/jeans.jpg" alt="Jeans">
+    <h3>Blue Jeans</h3>
+    <p>₹2999</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="clothing" data-id="3" data-title="Jacket" data-price="60" data-img="images/jacket.jpg">
+    <img src="images/jacket.jpg" alt="Jacket">
+    <h3>Leather Jacket</h3>
+    <p>₹3399</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="clothing" data-id="4" data-title="Sneakers" data-price="50" data-img="images/sneakers.jpg">
+    <img src="images/sneakers.jpg" alt="Sneakers">
+    <h3>Sneakers</h3>
+    <p>₹1999</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <!-- Electronics -->
+  <div class="product-card" data-category="electronics" data-id="5" data-title="Wireless Headphones" data-price="60" data-img="images/headphones.jpg">
+    <img src="images/headphones.jpg" alt="Headphones">
+    <h3>Wireless Headphones</h3>
+    <p>₹2299</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="electronics" data-id="6" data-title="Smartphone" data-price="350" data-img="images/smartphone.jpg">
+    <img src="images/smartphone.jpg" alt="Smartphone">
+    <h3>Smartphone</h3>
+    <p>₹13599</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="electronics" data-id="7" data-title="Laptop" data-price="700" data-img="images/laptop.jpg">
+    <img src="images/laptop.jpg" alt="Laptop">
+    <h3>Laptop</h3>
+    <p>₹49999</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="electronics" data-id="8" data-title="Bluetooth Speaker" data-price="90" data-img="images/speaker.jpg">
+    <img src="images/speaker.jpg" alt="Bluetooth Speaker">
+    <h3>Bluetooth Speaker</h3>
+    <p>₹1999</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <!-- Accessories -->
+  <div class="product-card" data-category="accessories" data-id="9" data-title="Smart Watch" data-price="80" data-img="images/watch.jpg">
+    <img src="images/watch.jpg" alt="Smart Watch">
+    <h3>Smart Watch</h3>
+    <p>₹2349</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="accessories" data-id="10" data-title="Sunglasses" data-price="30" data-img="images/sunglasses.jpg">
+    <img src="images/sunglasses.jpg" alt="Sunglasses">
+    <h3>Sunglasses</h3>
+    <p>₹889</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="accessories" data-id="11" data-title="Backpack" data-price="45" data-img="images/backpack.jpg">
+    <img src="images/backpack.jpg" alt="Backpack">
+    <h3>Backpack</h3>
+    <p>₹1890</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-category="accessories" data-id="12" data-title="Wallet" data-price="20" data-img="images/wallet.jpg">
+    <img src="images/wallet.jpg" alt="Wallet">
+    <h3>Wallet</h3>
+    <p>₹999</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
+
+</div>
+
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: ₹<span id="cart-total">0</span></h3>
+    <button id="proceed-checkout">Proceed to Checkout</button>
+    <button id="close-cart">Close Cart</button>
+  </div>
+
+  <!-- Checkout Form -->
+  <div id="checkout-section" class="checkout-section" style="display:none;">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <input type="text" id="cust-name" placeholder="Enter your name" required>
+      <input type="text" id="cust-address" placeholder="Enter your address" required>
+      <button type="submit">Place Order</button>
+    </form>
+    <p id="order-message" style="color:green; display:none;">🎉 Order placed successfully!</p>
+  </div>
+<!-- Product Modal -->
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <img id="modal-img" src="" alt="Product Image">
+    <h3 id="modal-title"></h3>
+    <p id="modal-price"></p>
+    <button id="modal-add-cart">Add to Cart</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
